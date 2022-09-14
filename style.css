@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif, Droid Arabic Kufi;
+}
+
+body {
+    background: linear-gradient(#111, #222);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(233, 31, 31);
+    position: absolute;
+    clip-path: circle(40% at left 70%);
+    z-index: -1;
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    background: rgba(146, 144, 144, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+nav .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+nav ul li {
+    color: #fff;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 6px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+}
+
+.content .text {
+    color: #ffffff;
+    width: 44%;
+    text-align: right;
+}
+
+.content .text h2 {
+    font-size: 40px;
+}
+
+.content .text h3 {
+    font-size: 25px;
+}
+
+.content .text p {
+    font-size: 23px;
+}
+
+.content .image {
+    width: 53%;
+}
+
+.content .image img {
+    width: 400px;
+}
+
+@media (min-width:950px) and (max-width:1150px) {
+    .content .image img {
+        width: 330px;
+    }
+}
+
+@media (max-width:950px) {
+    .content,
+    nav,
+    nav ul li {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    .content .image img {
+        width: 150px;
+    }
+    .content .image,
+    .content .text {
+        width: 90%;
+        padding: 20px 20px;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        background: rgba(146, 144, 144, 0.1);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    body::after {
+        clip-path: circle(50% at bottom);
+    }
+}
